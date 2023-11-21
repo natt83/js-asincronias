@@ -22,12 +22,7 @@ const jsonData = {
       }
     ]
   };
-  
-
-  const titles = jsonData.results.map(todo => todo.title);
- console.log(titles);
-
- const jsonData = {
+  const jsonData = {
     "results": [
       {
         "title": "Estudiar Js",
@@ -72,5 +67,10 @@ const jsonData = {
     });
   });
   tableContainer.appendChild(table);
-  
-  
+  console.log(Object.keys(jsonData.results[0]).join('\t'));
+
+jsonData.results.forEach(todo => {
+  console.log(Object.values(todo).join('\t'));
+});
+
+ 
